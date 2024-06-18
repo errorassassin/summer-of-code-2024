@@ -10,6 +10,9 @@ class InventoryItem(db.Model):
     item_description = db.Column(db.String)
     item_price = db.Column(db.Float, nullable=False)
     item_qty = db.Column(db.Integer, nullable=False)
+    parent_category_id = db.Column(db.String, db.ForeignKey('inventory_items.item_sku'))
+
+    parent_category = db.relationship('InventoryItem', remote_side=[item_sku], backref=db.backref('child_items', lazy='dynamic'))
 
     @validates('item_price')
     def validate_item_price(self, key, value):
