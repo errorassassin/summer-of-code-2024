@@ -1,7 +1,5 @@
-from flask_sqlalchemy import SQLAlchemy
+from . import db
 from sqlalchemy.orm import validates
-
-db = SQLAlchemy()
 
 class InventoryItem(db.Model):
     __tablename__ = 'inventory_items'

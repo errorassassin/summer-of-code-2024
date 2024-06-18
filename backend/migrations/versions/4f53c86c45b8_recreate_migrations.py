@@ -1,8 +1,8 @@
-"""Initial migration.
+"""Recreate migrations
 
-Revision ID: aa26e7986312
+Revision ID: 4f53c86c45b8
 Revises: 
-Create Date: 2024-06-18 22:12:16.697310
+Create Date: 2024-06-18 23:54:49.591108
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'aa26e7986312'
+revision = '4f53c86c45b8'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -32,13 +32,15 @@ def upgrade():
     sa.Column('item_description', sa.String(), nullable=True),
     sa.Column('item_price', sa.Float(), nullable=False),
     sa.Column('item_qty', sa.Integer(), nullable=False),
+    sa.Column('parent_category_id', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['parent_category_id'], ['inventory_items.item_sku'], ),
     sa.PrimaryKeyConstraint('item_sku')
     )
     op.create_table('staff',
     sa.Column('s_id', sa.Integer(), nullable=False),
     sa.Column('s_name', sa.String(), nullable=False),
     sa.Column('s_email', sa.String(), nullable=False),
-    sa.Column('s_is_admin', sa.Boolean(), nullable=True),
+    sa.Column('s_isAdmin', sa.Boolean(), nullable=True),
     sa.Column('s_contact', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('s_id'),
     sa.UniqueConstraint('s_email')
@@ -46,12 +48,10 @@ def upgrade():
     op.create_table('transactions',
     sa.Column('t_id', sa.Integer(), nullable=False),
     sa.Column('c_id', sa.Integer(), nullable=False),
-    sa.Column('s_id', sa.Integer(), nullable=False),
     sa.Column('t_date', sa.DateTime(), nullable=False),
     sa.Column('t_amount', sa.Float(), nullable=False),
-    sa.Column('t_category', sa.String(), nullable=False),
+    sa.Column('t_category', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['c_id'], ['customers.c_id'], ),
-    sa.ForeignKeyConstraint(['s_id'], ['staff.s_id'], ),
     sa.PrimaryKeyConstraint('t_id')
     )
     # ### end Alembic commands ###
