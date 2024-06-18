@@ -25,6 +25,9 @@ class InventoryItem(db.Model):
         if value < 0:
             raise ValueError("Quantity must be non-negative")
         return value
+    
+    def get_total_value(self):
+        return self.item_price * self.item_qty
 
 class Customer(db.Model):
     __tablename__ = 'customers'
@@ -38,6 +41,9 @@ class Customer(db.Model):
         if not value or '@' not in value:
             raise ValueError("Invalid email format")
         return value
+
+    def get_all_transactions(self):
+        return Transaction.query.filter_by(c_id=self.c_id).all()
 
 class Staff(db.Model):
     __tablename__ = 'staff'
