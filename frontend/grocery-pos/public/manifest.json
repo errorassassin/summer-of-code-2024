@@ -1,0 +1,9 @@
+{
+  "short_name": "Grocery PoS",
+  "name": "Grocery PoS",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

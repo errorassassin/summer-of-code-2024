@@ -1,0 +1,20 @@
+.gradient-background {
+  height: 100%;
+  background: linear-gradient(-45deg, #3c608a 0%, #423ff1 60%, #397fff 100%);
+}
+
+.login-art {
+  background: linear-gradient(180deg, #ed554d 0%, #ff8861 15%, #ff9d7d 50%, #ff8861 80%, #FF6861 100% );
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #F2F2F2 inset !important;
+}
