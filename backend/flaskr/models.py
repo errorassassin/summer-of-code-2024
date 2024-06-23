@@ -1,5 +1,6 @@
 from . import db
 from sqlalchemy.orm import validates
+from sqlalchemy.event import listens_for
 
 class InventoryItem(db.Model):
     __tablename__ = 'inventory_items'
@@ -45,8 +46,10 @@ class Staff(db.Model):
     s_id = db.Column(db.Integer, primary_key=True)
     s_name = db.Column(db.String, nullable=False)
     s_email = db.Column(db.String, nullable=False, unique=True)
-    s_isAdmin = db.Column(db.Boolean, default=False)
+    s_passwordHash = db.Column(db.String, nullable=False)
     s_contact = db.Column(db.String)
+    s_isAdmin = db.Column(db.Boolean, default=False)
+    s_isApproved = db.Column(db.Boolean, default=False)
 
     @validates('s_email')
     def validate_s_email(self, key, value):
@@ -69,3 +72,4 @@ class Transaction(db.Model):
         if value < 0:
             raise ValueError("Amount must be non-negative")
         return value
+    
