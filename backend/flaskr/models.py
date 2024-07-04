@@ -2,7 +2,13 @@ from . import db
 from sqlalchemy.orm import validates
 from sqlalchemy.event import listens_for
 
-class InventoryItem(db.Model):
+class BaseModel(db.Model):
+    __abstract__ = True
+
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
+class InventoryItem(BaseModel):
     __tablename__ = 'inventory_items'
     item_sku = db.Column(db.String, nullable=False, primary_key=True)
     item_name = db.Column(db.String, nullable=False)
@@ -25,7 +31,7 @@ class InventoryItem(db.Model):
     def get_total_value(self):
         return self.item_price * self.item_qty
 
-class Customer(db.Model):
+class Customer(BaseModel):
     __tablename__ = 'customers'
     c_id = db.Column(db.Integer, primary_key=True)
     c_name = db.Column(db.String, nullable=False)
@@ -41,7 +47,7 @@ class Customer(db.Model):
     def get_all_transactions(self):
         return Transaction.query.filter_by(c_id=self.c_id).all()
 
-class Staff(db.Model):
+class Staff(BaseModel):
     __tablename__ = 'staff'
     s_id = db.Column(db.Integer, primary_key=True)
     s_name = db.Column(db.String, nullable=False)
@@ -57,7 +63,7 @@ class Staff(db.Model):
             raise ValueError("Invalid email format")
         return value
 
-class Transaction(db.Model):
+class Transaction(BaseModel):
     __tablename__ = 'transactions'
     t_id = db.Column(db.Integer, primary_key=True)
     c_id = db.Column(db.Integer, db.ForeignKey('customers.c_id'), nullable=False)
