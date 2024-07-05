@@ -9,7 +9,7 @@ migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
-    cors = CORS(app)
+    cors = CORS(app, supports_credentials=True)
     app.config.from_object(Config)
     app.config['CORS_HEADERS'] = 'Content-Type'
     

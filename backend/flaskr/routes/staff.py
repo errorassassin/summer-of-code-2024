@@ -23,6 +23,15 @@ def get_staff():
         return {'message': 'Logged in', 'is_admin': staff.s_isAdmin, 'name': staff.s_name}
     except Exception as e:
         return {'error': str(e)}, 500
+    
+@staff_bp.route('/logout', methods=['GET'])
+def logout():
+    try:
+        session.pop('staff_id', None)
+        session.pop('is_admin', None)
+        return {'message': 'Logged out successfully'}
+    except Exception as e:
+        return {'error': str(e)}, 500
 
 
 @staff_bp.route('/', methods=['POST'])

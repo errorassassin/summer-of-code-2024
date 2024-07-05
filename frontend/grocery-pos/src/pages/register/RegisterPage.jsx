@@ -17,7 +17,7 @@ const RegisterPage = () => {
     const name = document.getElementById('name-input').value
     const email = document.getElementById('email-input').value
     const password = document.getElementById('password-input').value
-    axios.post(`${process.env.REACT_APP_API_URL}/staff/`, {
+    axios.post(`/staff/`, {
       name: name,
       email: email,
       password: password,
@@ -64,7 +64,7 @@ const RegisterPage = () => {
             </div>
             <button type="submit" className='bg-black text-white p-3.5 rounded-xl font-bold mt-1'>SIGN UP</button>
           </form>
-          <span className='mt-2 mb-1'>Already have an account? <a href="/" className='font-medium'>Login Instead</a></span>
+          <span className='mt-2 mb-1'>Already have an account? <a href="/" className='font-medium text-black no-underline'>Login Instead</a></span>
         </div>
       </div>
     </div>

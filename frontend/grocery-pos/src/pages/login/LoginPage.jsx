@@ -17,7 +17,7 @@ const LoginPage = () => {
     const email = document.getElementById('email-input').value
     const password = document.getElementById('password-input').value
 
-    axios.get(`${process.env.REACT_APP_API_URL}/staff/login`, {
+    axios.get(`/staff/login`, {
       params: {
         email: email,
         password: password
@@ -61,7 +61,7 @@ const LoginPage = () => {
             </div>
             <button type="submit" className='bg-black text-white p-3.5 rounded-xl font-bold mt-2'>LOGIN</button>
           </form>
-          <span className='mt-auto mb-1'>Don't have an account? <a href="register" className='font-medium'>Register Now!</a></span>
+          <span className='mt-auto mb-1'>Don't have an account? <a href="register" className='font-medium text-black no-underline'>Register Now!</a></span>
         </div>
       </div>
     </div>
