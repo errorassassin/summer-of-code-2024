@@ -67,15 +67,19 @@ class Transaction(BaseModel):
     __tablename__ = 'transactions'
     t_id = db.Column(db.Integer, primary_key=True)
     c_id = db.Column(db.Integer, db.ForeignKey('customers.c_id'), nullable=False)
-    t_date = db.Column(db.DateTime, nullable=False)
-    t_amount = db.Column(db.Float, nullable=False)
-    t_category = db.Column(db.String)
+    s_id = db.Column(db.Integer, db.ForeignKey('staff.s_id'), nullable=False)
+    t_time = db.Column(db.DateTime, nullable=False)
+    t_items = db.Column(db.JSON, nullable=False)
 
     customer = db.relationship('Customer', backref=db.backref('transactions', lazy=True))
+    staff = db.relationship('Staff', backref=db.backref('transactions', lazy=True))
 
-    @validates('t_amount')
-    def validate_t_amount(self, key, value):
-        if value < 0:
-            raise ValueError("Amount must be non-negative")
+    @validates('t_items')
+    def validate_t_items(self, key, value):
+        # validate syntax of t_items JSON to be a list of dictionaries with keys 'sku' and 'qty'
+        if not isinstance(value, list):
+            raise ValueError("Items must be a list")
+        for item in value:
+            if not isinstance(item, dict) or 'sku' not in item or 'qty' not in item:
+                raise ValueError("Each item must be a dictionary with keys 'sku' and 'qty'")
         return value
-    

@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request, session
 from ..models import db, Staff
 import bcrypt
+from .decorators import admin_required
 
 staff_bp = Blueprint('staff', __name__)
 
@@ -33,6 +34,27 @@ def logout():
     except Exception as e:
         return {'error': str(e)}, 500
 
+@staff_bp.route('/', methods=['GET'])
+@admin_required
+def get_all_staff():
+    try:
+        staff = Staff.query.all()
+        return jsonify([s.to_dict() for s in staff])
+    except Exception as e:
+        return {'error': str(e)}, 500
+    
+@staff_bp.route('/approvetoggle/<int:staff_id>', methods=['PUT'])
+@admin_required
+def approve_staff(staff_id):
+    try:
+        if staff_id == session.get('staff_id'):
+            return {'error': 'Cannot approve yourself'}, 400
+        staff = Staff.query.get(staff_id)
+        staff.s_isApproved = not staff.s_isApproved
+        db.session.commit()
+        return {'message': 'Staff approval status toggled', 'is_approved_new': staff.s_isApproved}
+    except Exception as e:
+        return {'error': str(e)}, 500
 
 @staff_bp.route('/', methods=['POST'])
 def add_staff():
