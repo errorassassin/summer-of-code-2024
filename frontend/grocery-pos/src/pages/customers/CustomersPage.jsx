@@ -25,11 +25,11 @@ const Customers = () => {
     const toastId = toast.loading("Adding Customer...");
     const formData = new FormData(e.target);
     const name = formData.get('name');
-    const email = formData.get('email');
     const phone = formData.get('contact');
+    const address = formData.get('address');
 
     axios.post('/customers/', {
-      name, email, phone
+      name, phone, address
     })
       .then((response) => {
         toast.success('Customer added successfully!', { id: toastId });
@@ -48,8 +48,8 @@ const Customers = () => {
   // Filter customersData based on searchQuery
   const filteredCustomers = customersData.filter(customer =>
     customer.c_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    customer.c_email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    customer.c_contact.includes(searchQuery)
+    customer.c_contact.includes(searchQuery) ||
+    customer.c_address.toLowerCase().includes(searchQuery.toLowerCase())    
   ).reverse();
 
   return (
@@ -60,7 +60,7 @@ const Customers = () => {
         </div>
         <button
           onClick={toggleForm}
-          className="text-md font-semibold bg-[#FF7F3E] py-2 px-3 rounded-xl flex items-center gap-1.5"
+          className="text-md font-semibold bg-[#ff9e1f] py-2 px-3 rounded-xl flex items-center gap-1.5"
         >
           {showForm ? <>Cancel</> : <><img src={addSVG} alt="Add" /> Add New</>}
         </button>
@@ -73,16 +73,16 @@ const Customers = () => {
             <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" required />
           </div>
           <div className="mb-3">
-            <label htmlFor="email" className="form-label font-medium">Email address <span className="text-danger">*</span></label>
-            <input type="email" className="form-control" id="email" name="email" placeholder="Enter email" required />
+            <label htmlFor="contact" className="form-label font-medium">Contact No. <span className="text-danger">*</span></label>
+            <input type="text" className="form-control" id="contact" name="contact" placeholder="Enter contact number" required />
           </div>
           <div className="mb-3">
-            <label htmlFor="contact" className="form-label font-medium">Contact Number</label>
-            <input type="text" className="form-control" id="contact" name="contact" placeholder="Enter contact number" />
+            <label htmlFor="address" className="form-label font-medium">Address</label>
+            <textarea className="form-control" id="address" name="address" placeholder="Enter address" />
           </div>
           <button
             type='submit'
-            className="text-md font-semibold bg-[#FF7F3E] py-2 px-3 rounded-xl flex items-center gap-2 mb-0.5"
+            className="text-md font-semibold bg-[#ff9e1f] py-2 px-3 rounded-xl flex items-center gap-2 mb-0.5"
           >
             <img src={addSVG} alt="Add" />
             Add
@@ -102,16 +102,16 @@ const Customers = () => {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Email</th>
               <th>Contact No.</th>
+              <th>Address</th>
             </tr>
           </thead>
           <tbody>
             {filteredCustomers.map((customer, index) => (
               <tr key={customer.cid}>
                 <td>{customer.c_name}</td>
-                <td>{customer.c_email}</td>
                 <td>{customer.c_contact}</td>
+                <td>{customer.c_address}</td>
               </tr>
             ))}
           </tbody>

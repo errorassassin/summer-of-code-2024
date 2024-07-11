@@ -75,7 +75,6 @@ const handleLogout = () => {
   axios.get(`/staff/logout`, {
   }).then((response) => {
     toast.success('Logged out!', { id: toastId });
-
   }).catch((error) => {
     if (error?.response?.data?.error?.length > 0)
       toast.error(error.response.data.error, { id: toastId })

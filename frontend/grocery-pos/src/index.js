@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import * as ReactDOM from "react-dom/client";
 import { Toaster, toast } from "react-hot-toast";
 import {
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
     path: "/cashier",
     element: <>
       <Navbar role="cashier" />
-      <div className="container pt-[56px] pb-[20px]">
+      <div className="container pt-[56px] pb-[20px] h-full flex flex-col">
         <Outlet />
       </div>
     </>,

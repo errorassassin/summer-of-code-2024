@@ -34,6 +34,17 @@ def logout():
     except Exception as e:
         return {'error': str(e)}, 500
 
+@staff_bp.route('/profile', methods=['GET'])
+def get_profile():
+    try:
+        staff_id = session.get('staff_id')
+        if not staff_id:
+            return {'error': 'Not logged in'}, 401
+        staff = Staff.query.get(staff_id)
+        return {'name': staff.s_name, 'email': staff.s_email}
+    except Exception as e:
+        return {'error': str(e)}, 500
+
 @staff_bp.route('/', methods=['GET'])
 @admin_required
 def get_all_staff():

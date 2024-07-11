@@ -35,13 +35,15 @@ class Customer(BaseModel):
     __tablename__ = 'customers'
     c_id = db.Column(db.Integer, primary_key=True)
     c_name = db.Column(db.String, nullable=False)
-    c_email = db.Column(db.String, nullable=False, unique=True)
-    c_contact = db.Column(db.String)
+    c_contact = db.Column(db.String, unique=True)
+    c_address = db.Column(db.String)
 
-    @validates('c_email')
-    def validate_c_email(self, key, value):
-        if not value or '@' not in value:
-            raise ValueError("Invalid email format")
+    @validates('c_contact')
+    def validate_c_contact(self, key, value):
+        if not value or not value.isdigit():
+            raise ValueError("Invalid phone number")
+        if len(value) != 10:
+            raise ValueError("Phone number must be 10 digits")
         return value
 
     def get_all_transactions(self):
