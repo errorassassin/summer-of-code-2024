@@ -20,6 +20,7 @@ import CustomersPage from './pages/customers/CustomersPage';
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.headers['Content-Type'] = 'application/json';
 axios.interceptors.response.use(
   (response) => {
     return response;

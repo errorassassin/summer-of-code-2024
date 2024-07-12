@@ -23,9 +23,13 @@ const LoginPage = () => {
         password: password
       }
     }).then((response) => {
-      toast.success('Login successful!', { id: toastId })
-      const role = response.data.is_admin ? 'admin' : 'cashier';
-      navigate(`/${role}`)
+      if (response.data) {
+        toast.success('Login successful!', { id: toastId })
+        const role = response.data.is_admin ? 'admin' : 'cashier';
+        navigate(`/${role}`)
+      }
+      else
+        toast.error('An error occurred', { id: toastId })
     }).catch((error) => {
       if (error?.response?.data?.error?.length > 0)
         toast.error(error.response.data.error, { id: toastId })

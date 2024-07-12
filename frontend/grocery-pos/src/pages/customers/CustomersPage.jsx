@@ -21,6 +21,12 @@ const Customers = () => {
     axios.get('/customers/')
       .then((response) => {
         setCustomersData(response.data);
+      })
+      .catch((error) => {
+        if (error?.response?.data?.error?.length > 0)
+          toast.error(error.response.data.error)
+        else
+          toast.error('An error occurred')
       });
   }, []);
 
