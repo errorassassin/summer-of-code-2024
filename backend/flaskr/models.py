@@ -15,6 +15,7 @@ class InventoryItem(BaseModel):
     item_description = db.Column(db.String)
     item_price = db.Column(db.Float, nullable=False)
     item_qty = db.Column(db.Integer, nullable=False)
+    item_category = db.Column(db.String, nullable=False)
     
     @validates('item_price')
     def validate_item_price(self, key, value):
