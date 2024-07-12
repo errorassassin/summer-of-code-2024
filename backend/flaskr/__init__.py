@@ -2,7 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
-from flask_session import Session
 from .config import Config
 
 db = SQLAlchemy()
@@ -22,9 +21,6 @@ def create_app():
     
     db.init_app(app)
     migrate.init_app(app, db)
-    
-    # Initialize the session
-    Session(app)
     
     from .routes import main_bp
     app.register_blueprint(main_bp)
