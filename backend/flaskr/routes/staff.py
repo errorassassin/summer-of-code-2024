@@ -37,6 +37,7 @@ def logout():
 @staff_bp.route('/profile', methods=['GET'])
 def get_profile():
     try:
+        print(session)
         staff_id = session.get('staff_id')
         if not staff_id:
             return {'error': 'Not logged in'}, 401

@@ -19,9 +19,13 @@ const CashierDashboard = () => {
   const [proceeded, setProceeded] = useState(false);
 
   useEffect(() => {
-    axios.get('/staff/profile').then((response) => {
-      setProfile(response.data);
-    });
+    axios.get('/staff/profile')
+      .then((response) => {
+        setProfile(response.data);
+      })
+      .catch(() => {
+        navigate('/');
+      });
   }, []);
 
   useEffect(() => {
