@@ -160,7 +160,7 @@ const MiddleSection = ({ customerData, setCustomerData, handleProceed }) => {
             <span>
               Phone <span className="text-danger">*</span>
             </span>
-            <span className="text-gray-400">(10 digits)</span>
+            <span className="text-gray-400">({(customerData.phone).length}/10 digits)</span>
           </label>
           <input
             type="tel"

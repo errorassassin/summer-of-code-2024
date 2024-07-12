@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import addSVG from './add.svg';
 import axios from 'axios';
 import { toast } from '../..';
 import Table from 'react-bootstrap/Table';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import EditCustomerDialog from './EditCustomerDialog';
 
 const Customers = () => {
   const [showForm, setShowForm] = useState(false);
   const [customersData, setCustomersData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showEditDialog, setShowEditDialog] = useState(null);
+
+  const handleClose = (e) => {
+    setShowEditDialog(null);
+  };
 
   useEffect(() => {
     axios.get('/customers/')
@@ -62,7 +70,7 @@ const Customers = () => {
           onClick={toggleForm}
           className="text-md font-semibold bg-[#ff9e1f] py-2 px-3 rounded-xl flex items-center gap-1.5"
         >
-          {showForm ? <>Cancel</> : <><img src={addSVG} alt="Add" /> Add New</>}
+          {showForm ? <>Cancel</> : <><PersonAddAlt1Icon /> Add New</>}
         </button>
       </div>
 
@@ -84,7 +92,7 @@ const Customers = () => {
             type='submit'
             className="text-md font-semibold bg-[#ff9e1f] py-2 px-3 rounded-xl flex items-center gap-2 mb-0.5"
           >
-            <img src={addSVG} alt="Add" />
+            <PersonAddAlt1Icon />
             Add
           </button>
         </form>
@@ -104,6 +112,7 @@ const Customers = () => {
               <th>Name</th>
               <th>Contact No.</th>
               <th>Address</th>
+              <th className='text-center'>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -112,11 +121,22 @@ const Customers = () => {
                 <td>{customer.c_name}</td>
                 <td>{customer.c_contact}</td>
                 <td>{customer.c_address}</td>
+                <td className='text-center'>
+                  <EditIcon className="cursor-pointer text-gray-600 me-1" onClick={()=>setShowEditDialog(customer.c_id)} />
+                  <DeleteIcon className="cursor-pointer text-red-500" />
+                </td>
               </tr>
             ))}
           </tbody>
         </Table>
       </div>
+
+      {showEditDialog && (
+        <EditCustomerDialog
+          customerID={showEditDialog}
+          handleClose={handleClose}
+        />
+      )}
     </>
   );
 };

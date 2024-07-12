@@ -12,6 +12,17 @@ def get_customers():
         return jsonify([c.to_dict() for c in customers])
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+@customers_bp.route('/<int:id>', methods=['GET'])
+@login_required
+def get_customer(id):
+    try:
+        customer = Customer.query.get(id)
+        if not customer:
+            return jsonify({"error": "Customer not found"}), 404
+        return jsonify(customer.to_dict())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @customers_bp.route('/', methods=['POST'])
 @login_required
@@ -31,6 +42,28 @@ def add_customer():
         db.session.add(new_customer)
         db.session.commit()
         return jsonify(new_customer.to_dict()), 201
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@customers_bp.route('/<int:id>', methods=['PUT'])
+@login_required
+def update_customer(id):
+    try:
+        customer = Customer.query.get(id)
+        if not customer:
+            return jsonify({"error": "Customer not found"}), 404
+        data = request.json
+        name = data.get('name')
+        phone = data.get('phone')
+        address = data.get('address')
+        if name:
+            customer.c_name = name
+        if phone:
+            customer.c_contact = phone
+        if address:
+            customer.c_address = address
+        db.session.commit()
+        return jsonify(customer.to_dict())
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
