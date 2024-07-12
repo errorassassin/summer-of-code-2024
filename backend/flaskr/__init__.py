@@ -10,8 +10,10 @@ migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})  # Enable CORS for all origins
-
+    
+    # Enable CORS for specific origin
+    CORS(app, supports_credentials=True, resources={r"/*": {"origins": "http://localhost:3000"}})
+    
     app.config.from_object(Config)
     app.config['CORS_HEADERS'] = 'Content-Type'  # Set CORS headers
     app.config['SESSION_TYPE'] = 'filesystem'
@@ -26,5 +28,5 @@ def create_app():
     
     from .routes import main_bp
     app.register_blueprint(main_bp)
-
+    
     return app
