@@ -71,7 +71,7 @@ def approve_staff(staff_id):
 def add_staff():
     try:
         data = request.get_json()
-        name = data.get('name')
+        name = ' '.join([n.capitalize() for n in data.get('name').split(' ')])
         password = data.get('password')
         email = data.get('email')
         contact = data.get('contact')

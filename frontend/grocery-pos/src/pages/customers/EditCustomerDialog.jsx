@@ -56,7 +56,7 @@ const EditCustomerDialog = ({ handleClose, customerID }) => {
         </div>
         <div className="mb-3">
           <label htmlFor="address" className="form-label font-medium">Address</label>
-          <textarea className='form-control' value={customerData?.address} onChange={(e) => setCustomerData({ ...customerData, address: e.target.value })}></textarea>
+          <input className='form-control' value={customerData?.address} onChange={(e) => setCustomerData({ ...customerData, address: e.target.value })}></input>
         </div>
         <div className="flex justify-between">
           <button

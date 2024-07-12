@@ -197,7 +197,7 @@ const MiddleSection = ({ customerData, setCustomerData, handleProceed }) => {
           <label htmlFor="address" className="form-label font-medium">
             Address
           </label>
-          <textarea
+          <input
             type="text"
             className="form-control"
             id="address"

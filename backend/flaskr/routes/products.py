@@ -4,11 +4,31 @@ from .decorators import admin_required, login_required
 
 products_bp = Blueprint('products', __name__)
 
+@products_bp.route('/categories', methods=['GET'])
+@login_required
+def get_categories():
+    try:
+        # return one item from each category
+        items_unique = InventoryItem.query.distinct(InventoryItem.item_category).all()
+        categories = [{"category": item.item_category, "sku": item.item_sku} for item in items_unique]
+        return jsonify(categories)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @products_bp.route('/', methods=['GET'])
-@admin_required
+@login_required
 def get_products():
     try:
         products = InventoryItem.query.all()
+        return jsonify([product.to_dict() for product in products])
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+@products_bp.route('/category/<category>', methods=['GET'])
+@login_required
+def get_products_by_category(category):
+    try:
+        products = InventoryItem.query.filter_by(item_category=category).all()
         return jsonify([product.to_dict() for product in products])
     except Exception as e:
         return jsonify({"error": str(e)}), 500

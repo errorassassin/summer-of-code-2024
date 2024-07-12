@@ -5,7 +5,35 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
+@layer utilities {
+  .scrollbar1::-webkit-scrollbar {
+    width: 15px;
+    height: 20px;
+  }
+
+  .scrollbar1::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar1::-webkit-scrollbar-thumb {
+    background: #9DD1ED;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar1::-webkit-scrollbar-thumb:hover {
+    background: #86bddb;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -19,5 +47,29 @@ html, body, #root {
 }
 
 .nav-link.active {
-  opacity: 1 !important; 
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .pt-mobile {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    height: calc(100% - 56px) !important;
+    min-height: calc(100% - 56px) !important;
+  }
+  .mobile-customm {
+    padding-left: 0.4rem;
+    margin-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0 1000px 1000px 0;
+  }
+  .mobile-centerr {
+    text-align: center;
+    margin-bottom: 8px !important;
+  }
+  .mobile-gloww {
+    font-weight: 600 !important;
+    color: #d85700;
+  }
 }

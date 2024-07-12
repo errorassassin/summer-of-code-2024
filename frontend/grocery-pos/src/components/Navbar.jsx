@@ -14,6 +14,7 @@ const links = {
     { title: <><i class="bi bi-house-door-fill"></i> Home</>, path: '/admin/' },
     { title: <><i class="bi bi-people-fill"></i> Customers</>, path: '/admin/customers' },
     { title: <><i class="bi bi-bar-chart-fill"></i> Analytics</>, path: '/admin/analytics' },
+    { title: <><i class="bi bi-box-fill me-[1px]"></i> Products</>, path: '/admin/products' },
   ]
 };
 
@@ -28,10 +29,7 @@ function NavbarCustom({ role }) {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-          >
+          <Nav className="me-auto my-2 my-lg-0">
             {
               links[role].map((link, index) => (
                 <Nav.Link

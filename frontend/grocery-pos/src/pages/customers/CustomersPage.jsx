@@ -94,7 +94,7 @@ const Customers = () => {
           </div>
           <div className="mb-3">
             <label htmlFor="address" className="form-label font-medium">Address</label>
-            <textarea className="form-control" id="address" name="address" placeholder="Enter address" />
+            <input className="form-control" id="address" name="address" placeholder="Enter address" />
           </div>
           <button
             type='submit'
