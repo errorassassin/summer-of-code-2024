@@ -18,17 +18,19 @@ const Customers = () => {
   };
 
   useEffect(() => {
-    axios.get('/customers/')
-      .then((response) => {
-        setCustomersData(response.data);
-      })
-      .catch((error) => {
-        if (error?.response?.data?.error?.length > 0)
-          toast.error(error.response.data.error)
-        else
-          toast.error('An error occurred')
-      });
-  }, []);
+    if (showEditDialog === null) {
+      axios.get('/customers/')
+        .then((response) => {
+          setCustomersData(response.data);
+        })
+        .catch((error) => {
+          if (error?.response?.data?.error?.length > 0)
+            toast.error(error.response.data.error)
+          else
+            toast.error('An error occurred')
+        });
+    };
+  }, [showEditDialog]);
 
   const toggleForm = () => {
     setShowForm(!showForm);
