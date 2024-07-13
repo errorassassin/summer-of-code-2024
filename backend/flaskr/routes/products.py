@@ -28,6 +28,7 @@ def get_products():
 @login_required
 def get_products_by_category(category):
     try:
+        print(category)
         products = InventoryItem.query.filter_by(item_category=category).all()
         return jsonify([product.to_dict() for product in products])
     except Exception as e:
