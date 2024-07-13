@@ -22,7 +22,7 @@ const ProductsPage = () => {
     setProducts([]);
     setSearch('');
     if (selectedCategory !== null) {
-      axios.get(`/products/category/${categories[selectedCategory]?.category}`)
+      axios.get(`/products/category/${(categories[selectedCategory]?.category).replaceAll(' ', '_')}`)
         .then((response) => {
           setProducts(response.data);
         })
