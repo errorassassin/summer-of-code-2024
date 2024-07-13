@@ -8,6 +8,7 @@ customers_bp = Blueprint('customers', __name__)
 @login_required
 def get_customers():
     try:
+        print(request.cookies)
         customers = Customer.query.all()
         return jsonify([c.to_dict() for c in customers])
     except Exception as e:
