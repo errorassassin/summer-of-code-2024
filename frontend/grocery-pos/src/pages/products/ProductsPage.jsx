@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import bannerSVG from './banner.svg'
 
 const ProductsPage = () => {
 
@@ -48,7 +49,7 @@ const ProductsPage = () => {
             <div className={`w-full md:w-fit flex justify-center mobile-customm ${selectedCategory === index ? 'bg-[#FFF6E9]' : ''}`}>
               <img src={require(`../../assets/products/${category?.sku}.jpg`)} alt="category" className={`min-w-[3.5rem] max-w-[3.5rem] min-h-[3.5rem] max-h-[3.5rem] rounded-full`} />
             </div>
-            <span className={`font-medium text-[0.78rem] md:text-[0.88rem] px-2 md:p-2 md:me-3 text-left line-clamp-2 leading-tighter md:leading-normal mobile-centerr ${selectedCategory===index?'font-semibold mobile-gloww':''}`}>{category?.category}</span>
+            <span className={`font-medium text-[0.78rem] md:text-[0.88rem] px-2 md:p-2 md:me-3 text-left line-clamp-2 leading-tighter md:leading-normal mobile-centerr ${selectedCategory === index ? 'font-semibold mobile-gloww' : ''}`}>{category?.category}</span>
           </div>
         ))}
       </div>
@@ -72,12 +73,23 @@ const ProductsPage = () => {
               {
                 (filteredProducts)?.map((product, index) => (
                   <div key={index} className="aspect-[15/28] w-full md:p-1.5 group flex flex-col">
-                    <div className="aspect-square bg-white rounded-2xl overflow-clip border">
+                    <div className="aspect-square bg-white rounded-2xl overflow-clip border relative">
                       <img src={require(`../../assets/products/${product?.item_sku}.jpg`)} alt={product.item_name} className='w-full h-full aspect-square object-contain bg-white transition  group-hover:scale-[110%]' />
+                      {product.item_mrp - product.item_price > 0 &&
+                        <div className="absolute top-0 left-[0.3rem] font-semibold text-white text-center leading-[1.16] text-[0.65rem] w-[35px]">
+                          <img src={bannerSVG} alt="offer" className="absolute w-[35px] z-[10]" />
+                          <span className='!z-[20] relative top-[3.5px]'>
+                            {Math.round((product.item_mrp - product.item_price) * 100 / product.item_mrp)}%<br></br>OFF
+                          </span>
+                        </div>
+                      }
                     </div>
                     <div className="font-medium text-[0.88rem] leading-[1.18rem] mt-[8px] tracking-wide line-clamp-2 h-[2.4rem]">{product.item_name}</div>
                     <div className="font-normal text-[0.82rem] leading-[1.2rem] mt-0.5 tracking-wide line-clamp-2">{product.item_qty} pieces left</div>
-                    <div className="mt-auto font-semibold mb-1">₹{product.item_price}</div>
+                    <div className="mt-auto font-semibold mb-1">
+                      ₹{product.item_price}
+                      <span className="ms-[5px] text-[0.8rem] line-through font-medium opacity-75">₹{product.item_mrp}</span>
+                    </div>
                     <button className="border-[#ff3269] border-[1.5px] p-1.5 rounded font-semibold text-[0.8rem] text-[#ff3269] mb-2">Edit</button>
                   </div>
                 ))

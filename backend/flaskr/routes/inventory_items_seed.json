@@ -1,0 +1,886 @@
+[
+  {
+    "item_name": "Capsicum Green",
+    "item_mrp": 94.0
+  },
+  {
+    "item_name": "Pomegranate",
+    "item_mrp": 143.0
+  },
+  {
+    "item_name": "Mango Langra",
+    "item_mrp": 184.0
+  },
+  {
+    "item_name": "Mosambi Regular",
+    "item_mrp": 139.0
+  },
+  {
+    "item_name": "Peach Indian",
+    "item_mrp": 163.0
+  },
+  {
+    "item_name": "Pomegranate",
+    "item_mrp": 300.0
+  },
+  {
+    "item_name": "Pomegranate Small",
+    "item_mrp": 271.0
+  },
+  {
+    "item_name": "Mangosteen ",
+    "item_mrp": 263.0
+  },
+  {
+    "item_name": "Custard Apple (Sitaphal)",
+    "item_mrp": 131.0
+  },
+  {
+    "item_name": "Beans French",
+    "item_mrp": 86.0
+  },
+  {
+    "item_name": "Lady Finger",
+    "item_mrp": 51.0
+  },
+  {
+    "item_name": "Onion",
+    "item_mrp": 72.0
+  },
+  {
+    "item_name": "Brinjal Bharta",
+    "item_mrp": 33.0
+  },
+  {
+    "item_name": "Watermelon Kiran",
+    "item_mrp": 120.0
+  },
+  {
+    "item_name": "Cabbage",
+    "item_mrp": 78.0
+  },
+  {
+    "item_name": "Potato",
+    "item_mrp": 74.0
+  },
+  {
+    "item_name": "Tender Coconut",
+    "item_mrp": 114.0
+  },
+  {
+    "item_name": "Cauliflower",
+    "item_mrp": 59.0
+  },
+  {
+    "item_name": "Cucumber (Kheera)",
+    "item_mrp": 42.0
+  },
+  {
+    "item_name": "Banana Elaichi / Yelakki",
+    "item_mrp": 137.0
+  },
+  {
+    "item_name": "Ginger",
+    "item_mrp": 83.0
+  },
+  {
+    "item_name": "Banana Robusta",
+    "item_mrp": 64.0
+  },
+  {
+    "item_name": "Organic Tomato",
+    "item_mrp": 95.0
+  },
+  {
+    "item_name": "Cucumber English",
+    "item_mrp": 46.0
+  },
+  {
+    "item_name": "Organic Lady Finger",
+    "item_mrp": 54.0
+  },
+  {
+    "item_name": "Lemon",
+    "item_mrp": 60.0
+  },
+  {
+    "item_name": "Coconut",
+    "item_mrp": 47.0
+  },
+  {
+    "item_name": "Organic Lemon",
+    "item_mrp": 42.0
+  },
+  {
+    "item_name": "Curry Leaves - Cleaned, without roots",
+    "item_mrp": 21.0
+  },
+  {
+    "item_name": "Muskmelon",
+    "item_mrp": 107.0
+  },
+  {
+    "item_name": "Organic Potato",
+    "item_mrp": 56.0
+  },
+  {
+    "item_name": "Beetroot Ooty",
+    "item_mrp": 41.0
+  },
+  {
+    "item_name": "Fortune Sugar",
+    "item_mrp": 65.0
+  },
+  {
+    "item_name": "Catch Jeera Powder Pouch",
+    "item_mrp": 100.0
+  },
+  {
+    "item_name": "Catch Masala Amchur Powder",
+    "item_mrp": 95.0
+  },
+  {
+    "item_name": "Parrys White Label Sugar",
+    "item_mrp": 60.0
+  },
+  {
+    "item_name": "Everest Kasuri Methi",
+    "item_mrp": 30.0
+  },
+  {
+    "item_name": "Conscious Food Rock Salt Unprocessed Pure & Natural",
+    "item_mrp": 69.0
+  },
+  {
+    "item_name": "Tata Sampann Chilli Powder with Natural Oils Lal Mirchi Powder",
+    "item_mrp": 66.0
+  },
+  {
+    "item_name": "Catch Dhania Powder",
+    "item_mrp": 86.0
+  },
+  {
+    "item_name": "Snapin Oregano Seasoning",
+    "item_mrp": 50.0
+  },
+  {
+    "item_name": "Popular Essentials Dhania (Coriander Seeds)",
+    "item_mrp": 75.0
+  },
+  {
+    "item_name": "24 Mantra Organic Jaggery Powder",
+    "item_mrp": 80.0
+  },
+  {
+    "item_name": "Satyam Badishop (Saunf)",
+    "item_mrp": 97.0
+  },
+  {
+    "item_name": "Amul Mithai Mate Condensed Sweetened Milk Tin",
+    "item_mrp": 126.0
+  },
+  {
+    "item_name": "Everest Sambhar Masala",
+    "item_mrp": 80.0
+  },
+  {
+    "item_name": "Snapin Chilli Flakes",
+    "item_mrp": 85.0
+  },
+  {
+    "item_name": "Catch Turmeric Powder",
+    "item_mrp": 88.0
+  },
+  {
+    "item_name": "Everest Garam Masala",
+    "item_mrp": 100.0
+  },
+  {
+    "item_name": "Everest Kitchen King Masala",
+    "item_mrp": 90.0
+  },
+  {
+    "item_name": "Everest Chicken Masala",
+    "item_mrp": 92.0
+  },
+  {
+    "item_name": "Snapin Oregano",
+    "item_mrp": 95.0
+  },
+  {
+    "item_name": "Mothers Recipe Appalam",
+    "item_mrp": 50.0
+  },
+  {
+    "item_name": "Catch Red Chilli Powder",
+    "item_mrp": 120.0
+  },
+  {
+    "item_name": "Everest Pav Bhaji Masala",
+    "item_mrp": 90.0
+  },
+  {
+    "item_name": "Satyam Nighties Spices Rai",
+    "item_mrp": 48.0
+  },
+  {
+    "item_name": "Catch Sprinkler Chat Masala",
+    "item_mrp": 85.0
+  },
+  {
+    "item_name": "Nestle Milkmaid Tin",
+    "item_mrp": 147.0
+  },
+  {
+    "item_name": "Mother's Recipe Ginger & Garlic Paste",
+    "item_mrp": 50.0
+  },
+  {
+    "item_name": "Satyam Nighties Spices Tamarind",
+    "item_mrp": 59.0
+  },
+  {
+    "item_name": "Popular Essentials Saunf/Fennel Seeds",
+    "item_mrp": 85.0
+  },
+  {
+    "item_name": "Chings Secret Schezwan Chutney",
+    "item_mrp": 180.0
+  },
+  {
+    "item_name": "KLF Coconad - Coconut Milk Powder",
+    "item_mrp": 98.0
+  },
+  {
+    "item_name": "Ching's Secret Chilli Vinegar",
+    "item_mrp": 50.0
+  },
+  {
+    "item_name": "Dukes Waffy Strawberry Roll",
+    "item_mrp": 180.0
+  },
+  {
+    "item_name": "Waffle Chocolates- Belgian Chocolate - Pack of 6",
+    "item_mrp": 170.0
+  },
+  {
+    "item_name": "Cadbury Perk Chocolate Coated Wafer Home Treats",
+    "item_mrp": 100.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Bites- Almonds(40gms) & Cadbury Dairy Milk Bites- Hazelnut(40gms) Chocolate Combo",
+    "item_mrp": 150.0
+  },
+  {
+    "item_name": "Cadbury 5 Star Chocolate Home Treat Bar",
+    "item_mrp": 120.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Chocolate Bar",
+    "item_mrp": 130.0
+  },
+  {
+    "item_name": "Kinder Schoko-Bons Crispy T12",
+    "item_mrp": 120.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Bites- Hazelnut 40 gms Chocolate Combo",
+    "item_mrp": 150.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Silk Chocolate Bar",
+    "item_mrp": 100.0
+  },
+  {
+    "item_name": "Cadbury 5 Star Chocolate Mini Treats Bars",
+    "item_mrp": 200.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Silk Mousse Chocolate Bar",
+    "item_mrp": 90.0
+  },
+  {
+    "item_name": "Hershey'S Cookies 'N' Creme Chocolate Bar",
+    "item_mrp": 65.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Fruit & Nut Chocolate Bar",
+    "item_mrp": 90.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Crackle Chocolate Bar",
+    "item_mrp": 45.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Bites - Chocolate Almond",
+    "item_mrp": 75.0
+  },
+  {
+    "item_name": "Wrigleys Hubba Bubba Awesome Original Bubble Gum",
+    "item_mrp": 320.0
+  },
+  {
+    "item_name": "After Eight Orange Mint Chocolate",
+    "item_mrp": 699.0
+  },
+  {
+    "item_name": "Snickers Best of Minis Assorted Chocolate Pack",
+    "item_mrp": 199.0
+  },
+  {
+    "item_name": "Amul Velvet Milk Chocolate",
+    "item_mrp": 220.0
+  },
+  {
+    "item_name": "Snickers Miniatures Peanut Chocolate Bar",
+    "item_mrp": 199.0
+  },
+  {
+    "item_name": "After Eight Mint Chocolate Thins",
+    "item_mrp": 699.0
+  },
+  {
+    "item_name": "Hershey's (Imported) Chocolate Miniatures",
+    "item_mrp": 899.0
+  },
+  {
+    "item_name": "Nova Nova Best Bite (All in one Classic Flavours)- Belgian, White and Dark Chocolate",
+    "item_mrp": 225.0
+  },
+  {
+    "item_name": "Nova Nova Best Bite- Dark Chocolate",
+    "item_mrp": 99.0
+  },
+  {
+    "item_name": "Nova Nova Choco Pockets- Classic Chocolate",
+    "item_mrp": 98.0
+  },
+  {
+    "item_name": "Toblerone Crunchy Almond Chocolate",
+    "item_mrp": 250.0
+  },
+  {
+    "item_name": "Dukes Waffy Strawberry Roll 250 gms Combo",
+    "item_mrp": 360.0
+  },
+  {
+    "item_name": "Amul Chocominis Chocolate Box",
+    "item_mrp": 140.0
+  },
+  {
+    "item_name": "Cadbury Perk - Chocolate Home Treats 126 gms Combo",
+    "item_mrp": 300.0
+  },
+  {
+    "item_name": "Icebreakers Sugar Free Mints, Coolmint",
+    "item_mrp": 299.0
+  },
+  {
+    "item_name": "Nova Nova Choco Pockets - Assorted",
+    "item_mrp": 147.0
+  },
+  {
+    "item_name": "Cadbury Dairy Milk Silk Bubbly Chocolate Bar",
+    "item_mrp": 195.0
+  },
+  {
+    "item_name": "TRESemme Hair Fall Defense Shampoo",
+    "item_mrp": 850.0
+  },
+  {
+    "item_name": "Dove Daily Shine Shampoo",
+    "item_mrp": 850.0
+  },
+  {
+    "item_name": "Head & Shoulders Cool Menthol Anti Dandruff Shampoo for Women & Men",
+    "item_mrp": 930.0
+  },
+  {
+    "item_name": "TRESemme Keratin Smooth Shampoo",
+    "item_mrp": 850.0
+  },
+  {
+    "item_name": "Herbal Essence Argan Oil Of Morocco Shampoo 240 Ml & Herbal Essence Argan Oil Of Morocco Conditiners 240 Ml Combo ",
+    "item_mrp": 800.0
+  },
+  {
+    "item_name": "L'Oreal Hyaluronic Moisture Shampoo",
+    "item_mrp": 929.0
+  },
+  {
+    "item_name": "Sunsilk Stunning Black Shine Shampoo",
+    "item_mrp": 765.0
+  },
+  {
+    "item_name": "Dove Intense Repair Shampoo",
+    "item_mrp": 850.0
+  },
+  {
+    "item_name": "Arata Hydrating Shampoo",
+    "item_mrp": 699.0
+  },
+  {
+    "item_name": "TRESemme Smooth & Shine Shampoo",
+    "item_mrp": 850.0
+  },
+  {
+    "item_name": "Tresemme Keratin Smooth Conditioner (335ml) & Shampoo (580ml) Combo",
+    "item_mrp": 1375.0
+  },
+  {
+    "item_name": "Wow Skin Science Apple Cider Vinegar Shampoo Restores Shine & Smoothness",
+    "item_mrp": 1099.0
+  },
+  {
+    "item_name": "L'Oreal Dream Lengths Shampoo",
+    "item_mrp": 1149.0
+  },
+  {
+    "item_name": "Clinic Plus Strong & Long Health Shampoo",
+    "item_mrp": 680.0
+  },
+  {
+    "item_name": "Bare Anatomy Anti-Dandruff Shampoo For Women and Men",
+    "item_mrp": 545.0
+  },
+  {
+    "item_name": "Paradyes Lighten Up! Bleach Pack Hair Cream",
+    "item_mrp": 1100.0
+  },
+  {
+    "item_name": "Bare Anatomy Expert Anti Frizz Leave In Conditioner",
+    "item_mrp": 599.0
+  },
+  {
+    "item_name": "Bare Anatomy Anti Hair Fall Shampoo For Women & Men",
+    "item_mrp": 545.0
+  },
+  {
+    "item_name": "Bare Anatomy Anti Frizz Shampoo",
+    "item_mrp": 595.0
+  },
+  {
+    "item_name": "Bare Anatomy Ultra Smoothing Hair Shampoo For Women & Men",
+    "item_mrp": 595.0
+  },
+  {
+    "item_name": "St.Botanica Moroccan Argan Hair Conditioner To Nourish Dull Dry & Frizzy Hair No Parabens",
+    "item_mrp": 549.0
+  },
+  {
+    "item_name": "L'Oreal Paris Casting Creme Gloss Hair Color (Dark Brown 400)(159ml) & L'Oreal Paris Color Protect Shampoo(340ml) Combo",
+    "item_mrp": 1098.0
+  },
+  {
+    "item_name": "Arata Curl Care Leave-In Conditioner",
+    "item_mrp": 499.0
+  },
+  {
+    "item_name": "Himalaya Anti-Hair Fall Bhringaraja Shampoo",
+    "item_mrp": 689.0
+  },
+  {
+    "item_name": "Tresemme Keratin Smooth Conditioner",
+    "item_mrp": 525.0
+  },
+  {
+    "item_name": "L'Oreal Color Protect Shampoo",
+    "item_mrp": 419.0
+  },
+  {
+    "item_name": "Nutriglow Hair Spa Cream With Damage Reverse & Moisture Lock Formulation For Dry & Damaged Hair",
+    "item_mrp": 525.0
+  },
+  {
+    "item_name": "Pilgrim Korean Argan Oil Hair Mask for Dry & Frizzy Hair for Smoothening, Deep Conditioning and Hairfall Control 200ml",
+    "item_mrp": 650.0
+  },
+  {
+    "item_name": "Herbal Essences Argan Oil of Morocco Conditioner For Hair Repair and No Frizz",
+    "item_mrp": 415.0
+  },
+  {
+    "item_name": "Kinley Packaged Drinking Water Pet",
+    "item_mrp": 20.0
+  },
+  {
+    "item_name": "Raw Pressery Fresh Juice - Valencia Orange",
+    "item_mrp": 350.0
+  },
+  {
+    "item_name": "Red Bull Energy Drink Multican",
+    "item_mrp": 480.0
+  },
+  {
+    "item_name": "Raw Pressery Almond Milk -Unsweetend Tetrapack",
+    "item_mrp": 325.0
+  },
+  {
+    "item_name": "Schweppes Indian Tonic Water Combo",
+    "item_mrp": 240.0
+  },
+  {
+    "item_name": "Thums Up Soft Drink",
+    "item_mrp": 160.0
+  },
+  {
+    "item_name": "Raw Pressery Coconut Water",
+    "item_mrp": 360.0
+  },
+  {
+    "item_name": "So Good Plant Based Almond Beverage Unsweetened Tetrapack",
+    "item_mrp": 300.0
+  },
+  {
+    "item_name": "Red Bull Energy Drink Multican",
+    "item_mrp": 700.0
+  },
+  {
+    "item_name": "Schweppes Soft Drink - Original Ginger Ale 300 ml Combo",
+    "item_mrp": 240.0
+  },
+  {
+    "item_name": "Bisleri Mineral Water Bottle (1L) Combo",
+    "item_mrp": 120.0
+  },
+  {
+    "item_name": "Storia Tender Coconut Water Pet",
+    "item_mrp": 178.0
+  },
+  {
+    "item_name": "Only Earth Oats Beverage Unsweetened, Non-Dairy Drink, Lactose Free",
+    "item_mrp": 295.0
+  },
+  {
+    "item_name": "Red Bull Energy Drink Can",
+    "item_mrp": 165.0
+  },
+  {
+    "item_name": "Sprite Soft Drink Multipack",
+    "item_mrp": 160.0
+  },
+  {
+    "item_name": "Raw Pressery Alphonso Mango Juice Tetrapack",
+    "item_mrp": 250.0
+  },
+  {
+    "item_name": "Only Earth Almond Milk - Unsweetened Tetrapack",
+    "item_mrp": 295.0
+  },
+  {
+    "item_name": "Red Bull Energy Drink Can",
+    "item_mrp": 125.0
+  },
+  {
+    "item_name": "Bisleri Packaged Drinking Water 2 l Combo",
+    "item_mrp": 120.0
+  },
+  {
+    "item_name": "Storia Tender Coconut Water 1 l Combo",
+    "item_mrp": 356.0
+  },
+  {
+    "item_name": "Real Fruit Power Cranberry Juice Tetrapack",
+    "item_mrp": 140.0
+  },
+  {
+    "item_name": "Bisleri Packaged Drinking Water",
+    "item_mrp": 20.0
+  },
+  {
+    "item_name": "Diet Coke Can",
+    "item_mrp": 40.0
+  },
+  {
+    "item_name": "Aquafina Drinking Water Pet",
+    "item_mrp": 20.0
+  },
+  {
+    "item_name": "Amul Masti Spiced Buttermilk",
+    "item_mrp": 15.0
+  },
+  {
+    "item_name": "Schweppes Indian Tonic Water Can",
+    "item_mrp": 60.0
+  },
+  {
+    "item_name": "Dukes Club Soda",
+    "item_mrp": 20.0
+  },
+  {
+    "item_name": "Thums Up Soft Drink",
+    "item_mrp": 45.0
+  },
+  {
+    "item_name": "Bisleri Packaged Drinking Water",
+    "item_mrp": 30.0
+  },
+  {
+    "item_name": "Coke Zero Can",
+    "item_mrp": 40.0
+  },
+  {
+    "item_name": "Bisleri Soda Pet",
+    "item_mrp": 20.0
+  },
+  {
+    "item_name": "Kinley Soda Pet",
+    "item_mrp": 20.0
+  },
+  {
+    "item_name": "Yojana Power White Eggs",
+    "item_mrp": 270.0
+  },
+  {
+    "item_name": "iD Idli & Dosa Batter",
+    "item_mrp": 165.0
+  },
+  {
+    "item_name": "The Health Factory Zero Maida Bread - 100% Whole Wheat",
+    "item_mrp": 55.0
+  },
+  {
+    "item_name": "Eggspro White Eggs",
+    "item_mrp": 330.0
+  },
+  {
+    "item_name": "Epigamia Almond Milk Unsweetened Dairy Free (Tetra Pack)",
+    "item_mrp": 325.0
+  },
+  {
+    "item_name": "Britannia Brown Bread",
+    "item_mrp": 45.0
+  },
+  {
+    "item_name": "Yojana Power White Eggs",
+    "item_mrp": 110.0
+  },
+  {
+    "item_name": "iD Soft & Creamy Paneer 200 gms Combo",
+    "item_mrp": 260.0
+  },
+  {
+    "item_name": "iD Idli & Dosa Batter",
+    "item_mrp": 95.0
+  },
+  {
+    "item_name": "Amul Cheese Slices",
+    "item_mrp": 145.0
+  },
+  {
+    "item_name": "Modern 100% Whole Wheat - Zero Maida Breakfast Bread",
+    "item_mrp": 50.0
+  },
+  {
+    "item_name": "Yojana Power White Eggs",
+    "item_mrp": 55.0
+  },
+  {
+    "item_name": "Farm Made Free Range Brown Eggs",
+    "item_mrp": 289.0
+  },
+  {
+    "item_name": "Britannia Vitarich Sandwich Premium White Bread",
+    "item_mrp": 38.0
+  },
+  {
+    "item_name": "Milky Mist Set Curd Tub",
+    "item_mrp": 138.0
+  },
+  {
+    "item_name": "Farm Made Free Range Brown Eggs",
+    "item_mrp": 149.0
+  },
+  {
+    "item_name": "iD Fresh Soft & Creamy Paneer",
+    "item_mrp": 130.0
+  },
+  {
+    "item_name": "Rishta Idli Dosa Batter",
+    "item_mrp": 150.0
+  },
+  {
+    "item_name": "Gokul Full Cream Fresh Milk Pouch 1 l Combo",
+    "item_mrp": 144.0
+  },
+  {
+    "item_name": "Britannia The Laughing Cow Cheese- Slices",
+    "item_mrp": 181.0
+  },
+  {
+    "item_name": "Amul Fresh Malai Paneer",
+    "item_mrp": 91.0
+  },
+  {
+    "item_name": "Amul Taaza Toned Fresh Milk (Pouch)",
+    "item_mrp": 28.0
+  },
+  {
+    "item_name": "Amul Taaza Homogenised Toned Milk (Tetra Pack)",
+    "item_mrp": 74.0
+  },
+  {
+    "item_name": "Amul Taaza Toned Fresh Milk (Pouch)",
+    "item_mrp": 56.0
+  },
+  {
+    "item_name": "Amul Masti Spiced Buttermilk",
+    "item_mrp": 15.0
+  },
+  {
+    "item_name": "Amul Masti Dahi Pouch",
+    "item_mrp": 35.0
+  },
+  {
+    "item_name": "Mother Dairy Toned Fresh Milk (Pouch)",
+    "item_mrp": 28.0
+  },
+  {
+    "item_name": "Amul Masti Dahi Cup",
+    "item_mrp": 45.0
+  },
+  {
+    "item_name": "Amul Masti Dahi Pouch",
+    "item_mrp": 80.0
+  },
+  {
+    "item_name": "Amul Gold Full Cream Fresh Milk (Pouch)",
+    "item_mrp": 68.0
+  },
+  {
+    "item_name": "Amul Gold Homogenised Full Cream Milk (Tetra Pack)",
+    "item_mrp": 80.0
+  },
+  {
+    "item_name": "iD Idli & Dosa Batter",
+    "item_mrp": 50.0
+  },
+  {
+    "item_name": "Society Leaf Tea",
+    "item_mrp": 570.0
+  },
+  {
+    "item_name": "Davidoff Rich Aroma Coffee",
+    "item_mrp": 750.0
+  },
+  {
+    "item_name": "Red Label Natural Care Tea, with 5 Ayurvedic Ingredients",
+    "item_mrp": 600.0
+  },
+  {
+    "item_name": "Davidoff Expresso Intense Coffee",
+    "item_mrp": 750.0
+  },
+  {
+    "item_name": "Tata Tea Gold",
+    "item_mrp": 600.0
+  },
+  {
+    "item_name": "Tata Tea Gold",
+    "item_mrp": 300.0
+  },
+  {
+    "item_name": "Nescafe Classic Dawn Jar",
+    "item_mrp": 375.0
+  },
+  {
+    "item_name": "Tata Tea Premium, Desh Ki Chai, Black Tea",
+    "item_mrp": 735.0
+  },
+  {
+    "item_name": "Bru Gold Premium Freeze Dried Coffee Experience Intense Coffee Taste Aromatic Instant Coffee",
+    "item_mrp": 580.0
+  },
+  {
+    "item_name": "Society Leaf Tea",
+    "item_mrp": 300.0
+  },
+  {
+    "item_name": "Wagh Bakri Premium Leaf Tea",
+    "item_mrp": 290.0
+  },
+  {
+    "item_name": "Taj Mahal Rich & Flavourful Tea",
+    "item_mrp": 470.0
+  },
+  {
+    "item_name": "Taj Mahal Tea",
+    "item_mrp": 900.0
+  },
+  {
+    "item_name": "SleepyOwl Premium Instant Coffee - Hazelnut",
+    "item_mrp": 550.0
+  },
+  {
+    "item_name": "SleepyOwl Premium Instant Coffee - French Vanilla",
+    "item_mrp": 550.0
+  },
+  {
+    "item_name": "Society Leaf Tea",
+    "item_mrp": 150.0
+  },
+  {
+    "item_name": "Vietnamese Cold Coffee",
+    "item_mrp": 199.0
+  },
+  {
+    "item_name": "Nescafe Ready To Drink Coffee Flavoured Milk, Iced Latte, Tetra Pack",
+    "item_mrp": 45.0
+  },
+  {
+    "item_name": "Classic Cold Coffee",
+    "item_mrp": 169.0
+  },
+  {
+    "item_name": "Tata Agni Tea",
+    "item_mrp": 55.0
+  },
+  {
+    "item_name": "Nescafe Classic Instant Coffee Powder Pouch",
+    "item_mrp": 185.0
+  },
+  {
+    "item_name": "Cavin's Strawberry Milkshake Tetrapack",
+    "item_mrp": 40.0
+  },
+  {
+    "item_name": "Tata Agni Tea",
+    "item_mrp": 110.0
+  },
+  {
+    "item_name": "Epigamia Milkshake - Chocolate Tetrapack",
+    "item_mrp": 40.0
+  },
+  {
+    "item_name": "Wagh Bakri Premium Leaf Tea",
+    "item_mrp": 145.0
+  },
+  {
+    "item_name": "Nescafe Classic Dawn Jar",
+    "item_mrp": 200.0
+  },
+  {
+    "item_name": "Lipton Ice Tea - Lemon",
+    "item_mrp": 60.0
+  },
+  {
+    "item_name": "Taj Mahal Tea Bags",
+    "item_mrp": 80.0
+  },
+  {
+    "item_name": "Hershey's Chocolate Milk Shake",
+    "item_mrp": 40.0
+  },
+  {
+    "item_name": "Bru Instant Coffee",
+    "item_mrp": 125.0
+  },
+  {
+    "item_name": "Lipton Honey Lemon Green Tea Bags",
+    "item_mrp": 170.0
+  },
+  {
+    "item_name": "Red Label Natural Care Tea",
+    "item_mrp": 155.0
+  }
+]

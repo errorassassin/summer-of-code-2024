@@ -14,6 +14,7 @@ class InventoryItem(BaseModel):
     item_name = db.Column(db.String, nullable=False)
     item_description = db.Column(db.String)
     item_price = db.Column(db.Float, nullable=False)
+    item_mrp = db.Column(db.Float, nullable=False, default=item_price)
     item_qty = db.Column(db.Integer, nullable=False)
     item_category = db.Column(db.String, nullable=False)
     

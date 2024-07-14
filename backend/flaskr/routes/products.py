@@ -16,7 +16,7 @@ def get_categories():
         return jsonify({"error": str(e)}), 500
 
 @products_bp.route('/', methods=['GET'])
-@login_required
+# @login_required
 def get_products():
     try:
         products = InventoryItem.query.all()
