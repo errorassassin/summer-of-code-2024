@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { toast } from '../'
-import axios from 'axios'
 
 const links = {
   'cashier': [
@@ -20,6 +19,13 @@ const links = {
 
 function NavbarCustom({ role }) {
   const location = useLocation();
+
+  const handleLogout = () => {
+    const toastId = toast.loading("Logging out...");
+    localStorage.removeItem('token');
+    toast.success('Logged out successfully!', { id: toastId });
+    location.pathname = '/';
+  }
 
   return (
     <Navbar expand="lg" className="bg-[#FFF6E9]" fixed="top">
@@ -66,19 +72,6 @@ function NavbarCustom({ role }) {
       </Container>
     </Navbar>
   );
-}
-
-const handleLogout = () => {
-  const toastId = toast.loading("Logging out...");
-  axios.get(`/staff/logout`, {
-  }).then((response) => {
-    toast.success('Logged out!', { id: toastId });
-  }).catch((error) => {
-    if (error?.response?.data?.error?.length > 0)
-      toast.error(error.response.data.error, { id: toastId })
-    else
-      toast.error('An error occurred', { id: toastId })
-  })
 }
 
 export default NavbarCustom;

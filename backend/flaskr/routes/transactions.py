@@ -1,7 +1,8 @@
-from flask import Blueprint, jsonify, request, session
+from flask import Blueprint, jsonify, request, current_app
 from ..models import db, Transaction
 import datetime
 from .decorators import admin_required, login_required
+import jwt
 
 transactions_bp = Blueprint('transactions', __name__)
 
@@ -31,7 +32,7 @@ def add_transaction():
     try:
         data = request.json
         c_id = data.get('c_id')
-        s_id = session.get('staff_id')
+        s_id = jwt.decode(request.headers.get('Authorization')[7:], current_app.config['SECRET_KEY'], algorithms=['HS256']).get('staff_id')
         t_time = datetime.datetime.now()
         t_items = data.get('items')
         if not c_id:

@@ -1,7 +1,9 @@
-from flask import Blueprint, jsonify, request, session
+from flask import Blueprint, jsonify, request, current_app
 from ..models import db, Staff
 import bcrypt
-from .decorators import admin_required
+from .decorators import admin_required, login_required
+import jwt
+import datetime
 
 staff_bp = Blueprint('staff', __name__)
 
@@ -19,25 +21,20 @@ def get_staff():
             return {'error': 'Invalid password'}, 401
         if not staff.s_isApproved:
             return {'error': 'Account approval pending'}, 401
-        session['staff_id'] = staff.s_id
-        session['is_admin'] = staff.s_isAdmin
-        return {'message': 'Logged in', 'is_admin': staff.s_isAdmin, 'name': staff.s_name}
-    except Exception as e:
-        return {'error': str(e)}, 500
-    
-@staff_bp.route('/logout', methods=['GET'])
-def logout():
-    try:
-        session.pop('staff_id', None)
-        session.pop('is_admin', None)
-        return {'message': 'Logged out successfully'}
+        token = jwt.encode({
+            'staff_id': staff.s_id,
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+        }, current_app.config['SECRET_KEY'], algorithm='HS256')
+        return {'message': 'Logged in', 'is_admin': staff.s_isAdmin, 'name': staff.s_name, 'token': token}
     except Exception as e:
         return {'error': str(e)}, 500
 
 @staff_bp.route('/profile', methods=['GET'])
+@login_required
 def get_profile():
     try:
-        staff_id = session.get('staff_id')
+        token = request.headers.get('Authorization')[7:]
+        staff_id = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=['HS256']).get('staff_id')
         if not staff_id:
             return {'error': 'Not logged in'}, 401
         staff = Staff.query.get(staff_id)
@@ -58,8 +55,8 @@ def get_all_staff():
 @admin_required
 def approve_staff(staff_id):
     try:
-        if staff_id == session.get('staff_id'):
-            return {'error': 'Cannot approve yourself'}, 400
+        if jwt.decode(request.headers.get('Authorization')[7:], current_app.config['SECRET_KEY'], algorithms=['HS256']).get('staff_id') == staff_id:
+            return {'error': 'Cannot approve own account'}, 400
         staff = Staff.query.get(staff_id)
         staff.s_isApproved = not staff.s_isApproved
         db.session.commit()

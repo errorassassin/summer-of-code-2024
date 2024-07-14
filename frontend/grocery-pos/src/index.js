@@ -15,21 +15,22 @@ import axios from 'axios';
 
 import AdminDashboard from "./pages/admin/dashboard/AdminDashboard";
 import AnalyticsPage from "./pages/admin/analytics/AnalyticsPage";
+import AdminProductsPage from "./pages/admin/products/ProductsPage";
 import CashierDashboard from "./pages/cashier/dashboard/CashierDashboard";
 import CustomersPage from './pages/customers/CustomersPage';
-import ProductsPage from "./pages/products/ProductsPage";
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 axios.defaults.headers['Content-Type'] = 'application/json';
+axios.defaults.headers['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
 axios.interceptors.response.use(
   (response) => {
     return response;
   },
   (error) => {
     if (error.response && error.response.status === 403) {
-      toast.error('Please login again...');
       window.location.href = '/';
+      toast.error('Please login again...');
     }
     return Promise.reject(error);
   }
@@ -67,7 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path: "products",
-        element: <ProductsPage />,
+        element: <AdminProductsPage />,
       },
       {
         path: "profile",

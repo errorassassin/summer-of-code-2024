@@ -24,6 +24,7 @@ const LoginPage = () => {
       }
     }).then((response) => {
       if (response.data) {
+        localStorage.setItem('token', response.data.token)
         toast.success('Login successful!', { id: toastId })
         const role = response.data.is_admin ? 'admin' : 'cashier';
         navigate(`/${role}`)

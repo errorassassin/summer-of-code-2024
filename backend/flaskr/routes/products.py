@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request, session
+from flask import Blueprint, jsonify, request
 from ..models import db, InventoryItem
 from .decorators import admin_required, login_required
 
@@ -16,7 +16,7 @@ def get_categories():
         return jsonify({"error": str(e)}), 500
 
 @products_bp.route('/', methods=['GET'])
-# @login_required
+@login_required
 def get_products():
     try:
         products = InventoryItem.query.all()
@@ -62,7 +62,7 @@ def create_product():
         return jsonify({"error": str(e)}), 500
     
 @products_bp.route('/<sku>', methods=['GET'])
-@admin_required
+@login_required
 def get_product(sku):
     try:
         product = InventoryItem.query.filter_by(item_sku=sku).first()
