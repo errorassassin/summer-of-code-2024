@@ -35,11 +35,11 @@ const RegisterPage = () => {
 
   return (
     <div className='gradient-background flex justify-center items-center'>
-      <div className="login-hero bg-white flex flex-row-reverse w-[63rem] min-w-[27rem] h-[34rem] rounded-[3rem] p-[2.1rem] gap-[2.1rem] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] sm:!m-5 scale-[0.8] sm:!scale-[1]">
+      <div className="login-hero bg-white flex flex-row-reverse w-[63rem] min-w-[27rem] h-[34.2rem] rounded-[3rem] p-[2.1rem] gap-[2.1rem] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] sm:!m-5 scale-[0.82] sm:!scale-[1]">
         <div className="login-art rounded-[2rem] h-full aspect-square justify-center items-center p-[1rem] hidden lg:flex">
           <img src={registerImg} className='drop-shadow-lg' alt="" />
         </div>
-        <div className="login-main w-full flex flex-col items-center">
+        <div className="login-main w-full flex flex-col items-center lg:!mb-0 scale-[1.05] sm:!scale-[1]">
           <div className="font-['Smooch_Sans'] font-bold text-[6rem] mt-[0.4rem] leading-none">Register</div>
           <div className="text-sm leading-none mt-1">Just add details and we're set.</div>
 
