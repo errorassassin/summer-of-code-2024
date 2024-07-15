@@ -18,6 +18,7 @@ import AnalyticsPage from "./pages/admin/analytics/AnalyticsPage";
 import AdminProductsPage from "./pages/admin/products/ProductsPage";
 import CashierDashboard from "./pages/cashier/dashboard/CashierDashboard";
 import CustomersPage from './pages/customers/CustomersPage';
+import Cart from "./pages/cashier/cart/Cart";
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
@@ -80,7 +81,7 @@ const router = createBrowserRouter([
     path: "/cashier",
     element: <>
       <Navbar role="cashier" />
-      <div className="container pt-[56px] pb-[12px] h-full flex flex-col">
+      <div className="container pt-[56px] pb-[12px] min-h-full flex flex-col">
         <Outlet />
       </div>
     </>,
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
         path: "profile",
         element: <div>Profile</div>,
       },
+      {
+        path: "cart",
+        element: <Cart />,
+      }
     ]
   }
 ]);

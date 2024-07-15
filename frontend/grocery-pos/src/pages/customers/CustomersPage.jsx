@@ -117,9 +117,9 @@ const Customers = () => {
         <Table striped bordered hover responsive>
           <thead>
             <tr>
-              <th>Name</th>
+              <th className='min-w-[9rem]'>Name</th>
               <th>Contact No.</th>
-              <th>Address</th>
+              <th className='min-w-[14rem]'>Address</th>
               <th className='text-center'>Actions</th>
             </tr>
           </thead>
