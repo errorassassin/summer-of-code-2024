@@ -21,7 +21,10 @@ DevClub will also be giving attracting **rewards** to those people who participa
       Refactoring present codebase to use Firebase services like firebase Authentication,firestore and cloud storage.
       
 - [ ] **[Week 4](app/week-4)** :
-      Implementing API calls, integrating a payment gateway, generating and managing invoices, updating sales data on Firestore, and integrating Firebase Analytics to track user interactions           and sales       data.Each task focuses on enhancing app functionality and ensuring robust, real-time data handling and analysis.  
+      Implementing API calls, integrating a payment gateway, generating and managing invoices, updating sales data on Firestore, and integrating Firebase Analytics to track user interactions           and sales       data.Each task focuses on enhancing app functionality and ensuring robust, real-time data handling and analysis.
+      
+- [ ] **[Week 5](app/week-5)** :
+      Implementing password reset and change functionalities using Firebase Auth, enable profile updates, enhance the UI with swipe-to-refresh functionality, and incorporate basic animations in Flutter to improve the overall user experience.        
 
 ### [Backend Development](backend)
 
@@ -29,12 +32,15 @@ DevClub will also be giving attracting **rewards** to those people who participa
 - [ ] **[Week 2](backend/week-2)** : Create API endpoints, implement CRUD Operations and develop Product Management Interface.
 - [ ] **[Week 3](backend/week-3)** : Implement user management and authentication, including secure staff authentication, staff and customer CRUD operations, secure password handling, and transaction management with full CRUD functionality.
 - [ ] **[Week 4](backend/week-4)** : Invoice Generation, Azure Account Creation and Setting up Virtual machine.
+- [ ] **[Week 5](backend/week-5)** : Setting up the VM, Configuring Ngnix and Gunicorn, Domain Names and HTTPs.
 
 ### [Frontend Development](frontend)
 
 - [ ] **[Week 1](frontend/week-1)** : Learn HTML, CSS, and JavaScript to create a visually appealing Login and Sign-Up page. Use provided Figma designs and ensure responsiveness for different screen sizes.
 - [ ] **[Week 2](frontend/week-2)** : Use Fetch APIs to authenticate login and store newly signed up members. Get familiar with Bootstrap, and add additional functionalities to the portal using Javascript.
 - [ ] **[Week 3](frontend/week-3)** : Learn ReactJS and build the Cashier portal. Use components, React Hooks, React Routers, React-PDF and React-share.
+- [ ] **[Week 4](frontend/week-4)** : Get more practice in React JS and build the Admin portal. Use Javascript libraries for analytics and add extra functionalities to improve user experience!
+- [ ] **[Week 5](frontend/week-5)** : Deploy your website on the web to complete the final stage of production of the PoS portal. Also try integrating the machine learning model with the frontend to have a complete real-life set-up with price-correction according to the market conditions, etc.
 
 ### [Machine Learning](machine-learning)
 
@@ -42,6 +48,7 @@ DevClub will also be giving attracting **rewards** to those people who participa
 - [ ] **[Week 2](machine-learning/week-2)** : Learn how to build a time-series ML model to forecast sales and inventory for a store! Use time series prediction methods such as ARIMA, LSTM and Prophet.
 - [ ] **[Week 3](machine-learning/week-3)** : Learn how to build a clustering model to automatically split your customer base into segments! Then, build a recommmendations engine to give personalised product recommendations.
 - [ ] **[Week 4](machine-learning/week-4)** : Learn how to build dynamic pricing models and demand forecasting techniques for our Point of Sale (PoS) application.
+- [ ] **[Week 5](machine-learning/week-4)** : Learn how to build an all-powerful AI agentic chatbot that integrates multiple capabilities, including real-time web scraping, sentiment analysis, and a reasoning and planning system using LangChain.
 
 ## How to Participate
 
